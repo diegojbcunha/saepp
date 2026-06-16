@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 420px;
+    padding: 20px;
+}
+
+.login-box {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.ferramenta-ico {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 4px 6px rgba(230, 126, 34, 0.3));
+}
+
+.login-box h4 {
+    text-align: center;
+    color: #2c3e50;
+    font-weight: 700;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+.form-label {
+    font-weight: 600;
+    color: #4a5568;
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+}
+
+.form-control {
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.form-control:focus {
+    border-color: #e67e22;
+    box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.15);
+    outline: none;
+}
+
+.btn-entrar {
+    width: 100%;
+    background: linear-gradient(135deg, #e67e22, #d35400);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-entrar:hover {
+    background: linear-gradient(135deg, #d35400, #e67e22);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(230, 126, 34, 0.4);
+}
+
+.btn-entrar:active {
+    transform: translateY(0);
+}
+
+.alert {
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.creditos {
+    text-align: center;
+    color: #a0aec0;
+    margin-top: 20px;
+    font-size: 0.8rem;
+}

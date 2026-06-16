@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/produtos.css">
+</head>
+<body>
+    <nav class="navbar navbar-dark px-3">
+        <span class="navbar-brand">Produtos</span>
+        <div>
+            <a href="/index.html" class="btn btn-outline-light btn-sm me-2">Início</a>
+            <span id="nomeUsuario" class="text-light me-2 nome-usuario"></span>
+            <a href="/api/auth/logout" class="btn btn-outline-light btn-sm">Sair</a>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <!-- Busca -->
+        <div class="barra-acoes">
+            <div class="row g-2">
+                <div class="col-md-8">
+                    <input type="text" class="form-control" id="busca" placeholder="Buscar por nome, categoria...">
+                </div>
+                <div class="col-md-2">
+                    <button class="btn-buscar w-100" onclick="buscar()">Buscar</button>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn-novo w-100" data-bs-toggle="modal" data-bs-target="#modalProduto" onclick="limparModal()">+ Novo</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabela -->
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Categoria</th>
+                    <th>Tamanho</th>
+                    <th>Estoque Atual</th>
+                    <th>Estoque Mín</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tabelaProdutos"></tbody>
+        </table>
+    </div>
+
+    <!-- Modal Produto -->
+    <div class="modal fade" id="modalProduto" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitulo">Novo Produto</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="produtoId">
+                    <div class="row">
+                        <div class="col-md-6 mb-2">
+                            <label class="form-label">Nome *</label>
+                            <input type="text" class="form-control" id="nome" required>
+                        </div>
+                        <div class="col-md-6 mb-2">
+                            <label class="form-label">Categoria *</label>
+                            <select class="form-select" id="categoria" required>
+                                <option value="">Selecione</option>
+                                <option value="Martelo">Martelo</option>
+                                <option value="Chave de Fenda">Chave de Fenda</option>
+                                <option value="Alicate">Alicate</option>
+                                <option value="Serra">Serra</option>
+                                <option value="Outros">Outros</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label">Descrição</label>
+                        <textarea class="form-control" id="descricao" rows="2"></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 mb-2">
+                            <label class="form-label">Material Cabeça</label>
+                            <input type="text" class="form-control" id="material_cabeca">
+                        </div>
+                        <div class="col-md-4 mb-2">
+                            <label class="form-label">Material Cabo</label>
+                            <input type="text" class="form-control" id="material_cabo">
+                        </div>
+                        <div class="col-md-4 mb-2">
+                            <label class="form-label">Tamanho</label>
+                            <input type="text" class="form-control" id="tamanho">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 mb-2">
+                            <label class="form-label">Peso (kg)</label>
+                            <input type="number" step="0.01" class="form-control" id="peso">
+                        </div>
+                        <div class="col-md-4 mb-2">
+                            <label class="form-label">Estoque Mínimo</label>
+                            <input type="number" class="form-control" id="estoque_minimo" value="5">
+                        </div>
+                        <div class="col-md-4 mb-2">
+                            <label class="form-label">Estoque Atual</label>
+                            <input type="number" class="form-control" id="estoque_atual" value="0">
+                        </div>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="revestimento_isolante">
+                        <label class="form-check-label">Revestimento Isolante</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="ponta_imantada">
+                        <label class="form-check-label">Ponta Imantada</label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" onclick="salvarProduto()">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/produtos.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAEP - Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <div class="ferramenta-ico"></div>
+            <h4>Almoxarifado SAEP</h4>
+            <div id="erro" class="alert alert-danger" style="display: none;"></div>
+            <form id="formLogin">
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="ex: admin@saep.com" required>
+                </div>
+                <div class="mb-3">
+                    <label for="senha" class="form-label">Senha</label>
+                    <input type="password" class="form-control" id="senha" name="senha" required>
+                </div>
+                <button type="submit" class="btn-entrar">Entrar</button>
+            </form>
+            <p class="creditos">admin@saep.com / admin123</p>
+        </div>
+    </div>
+    <script src="js/login.js"></script>
+</body>
+</html>

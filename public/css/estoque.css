@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f1f5f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    padding: 12px 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-brand {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.navbar .btn-outline-light {
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.navbar .btn-outline-light:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: white;
+}
+
+/* Container */
+.container {
+    padding-top: 25px;
+}
+
+/* Alerta */
+.alerta-estoque {
+    border-radius: 12px;
+    font-weight: 600;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border: none;
+    animation: slideDown 0.4s ease;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Tabela */
+.tabela-estoque {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.tabela-estoque thead {
+    background: linear-gradient(135deg, #2d3748, #1a202c);
+    color: white;
+}
+
+.tabela-estoque thead th {
+    font-weight: 600;
+    padding: 15px;
+    border: none;
+    font-size: 0.9rem;
+}
+
+.tabela-estoque tbody td {
+    padding: 12px 15px;
+    vertical-align: middle;
+    border-bottom: 1px solid #edf2f7;
+}
+
+.tabela-estoque tbody tr:hover {
+    background-color: #f7fafc;
+}
+
+.linha-alerta {
+    background-color: #fff5f5 !important;
+}
+
+.btn-selecionar {
+    background: #3182ce;
+    color: white;
+    border: none;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 6px 15px;
+    transition: all 0.2s ease;
+}
+
+.btn-selecionar:hover {
+    background: #2b6cb0;
+    transform: scale(1.05);
+}
+
+/* Card formulário */
+.card-formulario {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: none;
+    overflow: hidden;
+}
+
+.card-formulario .card-header {
+    background: linear-gradient(135deg, #3182ce, #2b6cb0);
+    color: white;
+    font-weight: 700;
+    padding: 16px 20px;
+    font-size: 1.1rem;
+    letter-spacing: 0.3px;
+}
+
+.card-formulario .card-body {
+    padding: 25px;
+}
+
+.card-formulario .form-label {
+    font-weight: 600;
+    color: #4a5568;
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+}
+
+.card-formulario .form-control,
+.card-formulario .form-select {
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 10px 12px;
+    transition: all 0.3s ease;
+}
+
+.card-formulario .form-control:focus,
+.card-formulario .form-select:focus {
+    border-color: #3182ce;
+    box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.12);
+    outline: none;
+}
+
+.btn-registrar {
+    background: linear-gradient(135deg, #38a169, #2f855a);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    padding: 12px;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-registrar:hover {
+    background: linear-gradient(135deg, #2f855a, #38a169);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(56, 161, 105, 0.3);
+}
+
+.btn-registrar:active {
+    transform: translateY(0);
+}

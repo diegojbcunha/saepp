@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f1f5f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    padding: 12px 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-brand {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.navbar .btn-outline-light {
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.navbar .btn-outline-light:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: white;
+}
+
+.nome-usuario {
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+/* Container principal */
+.container {
+    padding-top: 40px;
+}
+
+.container h2 {
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+/* Cards */
+.card-atalho {
+    background: white;
+    border-radius: 16px;
+    padding: 35px 25px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    height: 100%;
+}
+
+.card-atalho:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    border-color: #e67e22;
+}
+
+.card-atalho h4 {
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 12px;
+}
+
+.card-atalho p {
+    color: #718096;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.icone-card {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    display: block;
+}
